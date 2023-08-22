@@ -15,14 +15,14 @@ playGame('rock');
 "
       >
         
-      <img class="move-icon" src="./images/rock.PNG"></button>
+      <img class="move-icon" src="./image/rock.PNG"></button>
 
       <button class="move-button"
         onclick="
 playGame('paper');
   "
       >
-        <img class="move-icon" src="./images/paper.PNG">
+        <img class="move-icon" src="./image/paper.PNG">
       </button>
 
       <button class="move-button"
@@ -30,12 +30,12 @@ playGame('paper');
 playGame('scissors')
   "
       >
-        <img src="./images/Scissor.PNG" class="move-icon">
+        <img src="./image/scissors.PNG" class="move-icon">
       </button>
       <p class="js-result"></p>
       <p class="js-moves"></p>
       <p class="js-score"></p>
-      <button onclick="
+      <button class="reset-button" onclick="
         score.wins = 0;
         score.losses = 0;
         score.ties = 0;
@@ -113,7 +113,10 @@ let score = JSON.parse(localStorage.getItem('score')) || {
 
        document.querySelector('.js-result').innerHTML = result;
        document.querySelector('.js-moves').innerHTML = 
-       `You ${playerMove} - ${computerMove} Computer`;
+       ` You
+        <img src="image/${playerMove}.PNG" class="move-icon">
+        <img src="image/${computerMove}.PNG" class="move-icon">
+        Computer`;
         }
 
        
