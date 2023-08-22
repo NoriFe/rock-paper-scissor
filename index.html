@@ -7,11 +7,11 @@
     <title>Rock Paper Scissor game</title>
 </head>
 <body>
-    <section>
+       <section>
         <p class="title">Rock Paper Scissors</p>
         <button class="move-button"
           onclick="
-  
+  playGame('rock');
   "
         >
           
@@ -19,22 +19,32 @@
   
         <button class="move-button"
           onclick="
-  
+  playGame('paper');
     "
         >
-          <img class="move-icon" src="./image/paper.PNG">
+          <img class="move-icon" src="./images/paper.PNG">
         </button>
   
         <button class="move-button"
           onclick="
- 
+  playGame('scissors')
     "
         >
-          <img src="./image/Scissor.PNG" class="move-icon">
+          <img src="./images/Scissor.PNG" class="move-icon">
         </button>
-        
+        <p class="js-result"></p>
+        <p class="js-moves"></p>
+        <p class="js-score"></p>
+        <button onclick="
+          score.wins = 0;
+          score.losses = 0;
+          score.ties = 0;
+          localStorage.removeItem('score');
+          updateScoreElement ();
+        ">
           reset score
         </button>
       </section>
+      <script> </script>
 </body>
 </html>
